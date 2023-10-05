@@ -18,7 +18,8 @@
     "@microsoft/sp-core-library": "1.11.0",
     "@microsoft/sp-dialog": "1.11.0",
     "alertifyjs": "^1.13.1",
-    "sp-pnp-js": "^3.0.10"
+    "sp-pnp-js": "^3.0.10",
+    "@pnp/graph": "^2.11.0"
   },
   "devDependencies": {
     "@microsoft/sp-build-web": "1.11.0",
