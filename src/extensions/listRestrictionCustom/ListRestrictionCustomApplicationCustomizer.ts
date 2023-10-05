@@ -7,6 +7,7 @@ import * as strings from "ListRestrictionCustomApplicationCustomizerStrings";
 import "../../ExternalRef/Css/alertify.min.css";
 import "../../ExternalRef/Css/style.css";
 import "alertifyjs";
+import { graph } from "@pnp/graph/presets/all";
 
 var alertify: any = require("../../ExternalRef/Js/alertify.min.js");
 const LOG_SOURCE: string = "ListRestrictionCustomApplicationCustomizer";
@@ -30,6 +31,11 @@ export default class ListRestrictionCustomApplicationCustomizer extends BaseAppl
       pnp.setup({
         spfxContext: this.context,
       });
+
+      graph.setup({
+        spfxContext: this.context,
+      });
+
       this.getListItems();
       //  return Promise.resolve();
       document.querySelectorAll(".ms-HorizontalNavItem-link").forEach((btn) => {
@@ -45,19 +51,33 @@ export default class ListRestrictionCustomApplicationCustomizer extends BaseAppl
     var currentUserName = this.context.pageContext.user.email;
     console.log("currentUserName >> ", currentUserName);
 
-    await pnp.sp.web.siteGroups
-      .getByName("Atalaya Admin")
-      .users.get()
+    await graph.groups
+      .getById("50f13710-3dcf-4be6-b2fe-fbacfc6729f6")
+      .members.top(999)()
       .then((allItems: any[]) => {
         console.log("allItems >> ", allItems);
         IsCurrentUserAdmin = allItems.some(
-          (e: any) => e.Email.toLowerCase() === currentUserName.toLowerCase()
+          (e: any) => e.userPrincipalName.toLowerCase() === currentUserName.toLowerCase()
         );
         console.log("IsCurrentUserAdmin >> ", IsCurrentUserAdmin);
       })
       .catch((err: any) => {
         console.log("Err >> ", err);
       });
+
+    // await pnp.sp.web.siteGroups
+    //   .getByName("Atalaya Admin")
+    //   .users.get()
+    //   .then((allItems: any[]) => {
+    //     console.log("allItems >> ", allItems);
+    //     IsCurrentUserAdmin = allItems.some(
+    //       (e: any) => e.Email.toLowerCase() === currentUserName.toLowerCase()
+    //     );
+    //     console.log("IsCurrentUserAdmin >> ", IsCurrentUserAdmin);
+    //   })
+    //   .catch((err: any) => {
+    //     console.log("Err >> ", err);
+    //   });
 
     await pnp.sp.web.lists
       .getByTitle("RestrictedLists")

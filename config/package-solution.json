@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "atalaya-list-restriction-client-side-solution",
+    "name": "augustbio-list-restriction-client-side-solution",
     "id": "97806140-ac8a-464a-a49d-773435b40cf0",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
@@ -26,6 +26,6 @@
     ]
   },
   "paths": {
-    "zippedPackage": "solution/atalaya-list-restriction.sppkg"
+    "zippedPackage": "solution/augustbio-list-restriction.sppkg"
   }
 }
