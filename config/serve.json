@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://atalayacapital.sharepoint.com/sites/Watchtower/Lists/RestrictedLists/AllItems.aspx",
+      "customActions": {
+        "a3d54e0f-47fd-4cf7-9f5e-c4b85ecefd3c": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Sorry!You are not authorized to access this page"
+          }
+        }
+      }
+    },
+    "listRestrictionCustom": {
+      "pageUrl": "https://atalayacapital.sharepoint.com/sites/Watchtower/Lists/RestrictedLists/AllItems.aspx",
+      "customActions": {
+        "a3d54e0f-47fd-4cf7-9f5e-c4b85ecefd3c": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Sorry!You are not authorized to access this page"
+          }
+        }
+      }
+    }
+  }
+}
+
+// Dev pageUrl => https://technorucs365.sharepoint.com/sites/Atalaya/Lists/RestrictedLists/AllItems.aspx
+
+// Prod pageUrl => https://atalayacapital.sharepoint.com/sites/Watchtower/Lists/RestrictedLists/AllItems.aspx

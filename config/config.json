@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "list-restriction-custom-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/listRestrictionCustom/ListRestrictionCustomApplicationCustomizer.js",
+          "manifest": "./src/extensions/listRestrictionCustom/ListRestrictionCustomApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ListRestrictionCustomApplicationCustomizerStrings": "lib/extensions/listRestrictionCustom/loc/{locale}.js"
+  }
+}
