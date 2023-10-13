@@ -4,7 +4,7 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://chandrudemo.sharepoint.com/sites/AugustBioServices/Lists/RestrictedLists/AllItems.aspx",
+      "pageUrl": "https://augustbio.sharepoint.com/sites/CIP-DEV/Lists/RestrictedLists/AllItems.aspx",
       "customActions": {
         "a3d54e0f-47fd-4cf7-9f5e-c4b85ecefd3c": {
           "location": "ClientSideExtension.ApplicationCustomizer",
@@ -15,7 +15,7 @@
       }
     },
     "listRestrictionCustom": {
-      "pageUrl": "https://chandrudemo.sharepoint.com/sites/AugustBioServices/Lists/RestrictedLists/AllItems.aspx",
+      "pageUrl": "https://augustbio.sharepoint.com/sites/CIP-DEV/Lists/RestrictedLists/AllItems.aspx",
       "customActions": {
         "a3d54e0f-47fd-4cf7-9f5e-c4b85ecefd3c": {
           "location": "ClientSideExtension.ApplicationCustomizer",
@@ -30,4 +30,4 @@
 
 // Dev pageUrl => https://chandrudemo.sharepoint.com/sites/AugustBioServices/Lists/RestrictedLists/AllItems.aspx
 
-// Prod pageUrl => 
+// Prod pageUrl => https://augustbio.sharepoint.com/sites/CIP-DEV/Lists/RestrictedLists/AllItems.aspx

@@ -51,13 +51,18 @@ export default class ListRestrictionCustomApplicationCustomizer extends BaseAppl
     var currentUserName = this.context.pageContext.user.email;
     console.log("currentUserName >> ", currentUserName);
 
+    // Dev Id => 50f13710-3dcf-4be6-b2fe-fbacfc6729f6
+
+    // Prod Id => 7484a5f9-7cae-4cfa-9542-eba4875011b0
+
     await graph.groups
-      .getById("50f13710-3dcf-4be6-b2fe-fbacfc6729f6")
+      .getById("7484a5f9-7cae-4cfa-9542-eba4875011b0")
       .members.top(999)()
       .then((allItems: any[]) => {
         console.log("allItems >> ", allItems);
         IsCurrentUserAdmin = allItems.some(
-          (e: any) => e.userPrincipalName.toLowerCase() === currentUserName.toLowerCase()
+          (e: any) =>
+            e.userPrincipalName.toLowerCase() === currentUserName.toLowerCase()
         );
         console.log("IsCurrentUserAdmin >> ", IsCurrentUserAdmin);
       })
